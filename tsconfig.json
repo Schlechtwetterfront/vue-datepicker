@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "baseUrl": ".",
+        "rootDir": ".",
+        "sourceMap": false,
+        "noEmit": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "module": "esnext",
+        "target": "es5",
+        "importHelpers": true,
+
+        "noImplicitAny": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "isolatedModules": false,
+
+        "lib": ["esnext", "DOM"]
+    },
+    "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.vue"],
+    "exclude": ["node_modules"]
+}

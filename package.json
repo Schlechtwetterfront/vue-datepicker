@@ -1,0 +1,63 @@
+{
+    "name": "@schlechtwetterfront/vue-datepicker",
+    "version": "0.1.0",
+    "description": "A customizable datepicker for Vue 3",
+    "author": "Benedikt Schatz",
+    "repository": "https://github.com/Schlechtwetterfront/vue-datepicker.git",
+    "license": "MIT",
+    "keywords": [
+        "vue",
+        "datepicker"
+    ],
+    "main": "dist/vue-datepicker.common.js",
+    "browser": "dist/vue-datepicker.esm.js",
+    "unpkg": "dist/vue-datepicker.global.js",
+    "jsdelivr": "dist/vue-datepicker.global.js",
+    "types": "dist/vue-datepicker.d.js",
+    "files": [
+        "dist/*.js",
+        "dist/vue-datepicker.d.ts",
+        "LICENSE",
+        "README.md"
+    ],
+    "scripts": {
+        "bundle": "yarn build && yarn build:dts",
+        "build": "rollup -c rollup.config.js",
+        "build:dts": "api-extractor run --local --verbose",
+        "build:samples": "webpack --env.NODE_ENV=prod --env.prod --env.production",
+        "test": "jest",
+        "serve": "webpack-dev-server"
+    },
+    "peerDependencies": {
+        "date-fns": "^2.15.0",
+        "vue": "3.0.0-rc.5"
+    },
+    "devDependencies": {
+        "@microsoft/api-extractor": "^7.9.2",
+        "@rollup/plugin-commonjs": "^14.0.0",
+        "@rollup/plugin-node-resolve": "^8.4.0",
+        "@types/jest": "^26.0.5",
+        "@types/node": "^14.0.24",
+        "@vue/compiler-sfc": "^3.0.0-rc.5",
+        "@vue/test-utils": "^2.0.0-beta.2",
+        "css-loader": "^4.2.0",
+        "date-fns": "^2.15.0",
+        "html-webpack-plugin": "^4.2.0",
+        "jest": "^26.1.0",
+        "mini-css-extract-plugin": "^0.10.0",
+        "rollup": "^2.22.0",
+        "rollup-plugin-terser": "^7.0.0",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "sass": "^1.26.3",
+        "sass-loader": "^9.0.2",
+        "ts-jest": "^26.1.3",
+        "ts-loader": "^8.0.1",
+        "tslib": "^2.0.0",
+        "typescript": "^3.8.3",
+        "vue": "^3.0.0-rc.5",
+        "vue-loader": "^16.0.0-beta.4",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
+    }
+}

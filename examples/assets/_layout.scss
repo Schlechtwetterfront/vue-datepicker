@@ -1,0 +1,79 @@
+$base-column-width: percentage(1/7);
+
+.v-input-wrapper {
+    position: relative;
+    display: inline-block;
+
+    .v-picker-wrapper--pop-up {
+        position: absolute;
+        z-index: 10;
+    }
+}
+
+.v-picker {
+    display: inline-block;
+    width: 320px;
+
+    &__controls {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+
+        > * {
+            flex: 1;
+            padding: 0.5rem 0;
+        }
+    }
+
+    &__prev-year,
+    &__next-year,
+    &__prev-month,
+    &__next-month,
+    &__prev-decade,
+    &__next-decade {
+        flex: 0 0 $base-column-width;
+    }
+
+    &__header {
+        display: flex;
+        text-align: center;
+    }
+
+    &__days,
+    &__months,
+    &__years {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__day,
+    &__month,
+    &__year,
+    &__header-cell {
+        padding: 0.5rem 0;
+    }
+
+    &--day .v-picker {
+        &__header-cell {
+            flex: 0 0 $base-column-width;
+        }
+
+        &__day {
+            flex: 0 0 $base-column-width;
+        }
+    }
+
+    &--month .v-picker {
+        &__month {
+            flex: 0 0 percentage(1/3);
+        }
+    }
+
+    &--year .v-picker {
+        &__year {
+            flex: 0 0 percentage(1/3);
+        }
+    }
+}

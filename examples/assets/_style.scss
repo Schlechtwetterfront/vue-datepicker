@@ -1,0 +1,73 @@
+$accent: #26f !default;
+
+.v-picker {
+    background-color: white;
+    border: 1px solid #c0c0c0;
+
+    &__prev-decade,
+    &__next-decade,
+    &__prev-year,
+    &__next-year,
+    &__prev-month,
+    &__next-month {
+        cursor: pointer;
+
+        &:hover {
+            background-color: #efefef;
+        }
+    }
+
+    &__year-label,
+    &__month-label {
+        cursor: pointer;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &__header {
+        color: #999;
+    }
+
+    &__header,
+    &__decade-label {
+        cursor: default;
+    }
+
+    &__day,
+    &__month,
+    &__year {
+        &:hover {
+            cursor: pointer;
+            background-color: #efefef;
+        }
+
+        &--selected {
+            color: $accent;
+        }
+
+        &--disabled {
+            color: #ccc;
+            background-color: initial !important;
+            cursor: default !important;
+        }
+
+        &--this-year,
+        &--this-month,
+        &--today {
+            text-decoration: dotted underline;
+        }
+    }
+
+    &--day .v-picker {
+        &__month-label {
+            text-align: right;
+            margin-right: 0.5rem;
+        }
+
+        &__year-label {
+            text-align: left;
+        }
+    }
+}

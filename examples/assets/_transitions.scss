@@ -1,0 +1,78 @@
+$anim-duration: 0.2s;
+
+.v-picker__body {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    > * {
+        flex: 0 0 100%;
+    }
+
+    .v-transition-picker-items {
+        &-back-enter-active,
+        &-forward-leave-active {
+            order: 1;
+        }
+
+        &-back-leave-active,
+        &-forward-enter-active {
+            order: 2;
+        }
+
+        &-back-enter-active {
+            animation: slide-from-left $anim-duration;
+        }
+
+        &-forward-leave-active {
+            animation: slide-from-right $anim-duration;
+        }
+
+        &-back-leave-active,
+        &-forward-enter-active {
+            animation: dummy $anim-duration;
+        }
+    }
+}
+
+@keyframes slide-from-left {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes slide-from-right {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -100%;
+    }
+}
+
+@keyframes dummy {
+    from {
+    }
+    to {
+    }
+}
+
+.v-transition-pop-up-appear {
+    &-enter-active {
+        animation: halfslide-from-top $anim-duration;
+    }
+}
+
+@keyframes halfslide-from-top {
+    from {
+        margin-top: -1rem;
+    }
+    to {
+        margin-top: 0;
+    }
+}
