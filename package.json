@@ -1,6 +1,6 @@
 {
     "name": "@schlechtwetterfront/vue-datepicker",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "A customizable datepicker for Vue 3",
     "author": "Benedikt Schatz",
     "repository": "https://github.com/Schlechtwetterfront/vue-datepicker.git",
