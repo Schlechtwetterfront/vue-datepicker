@@ -1,6 +1,6 @@
 {
     "name": "@schlechtwetterfront/vue-datepicker",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "A customizable datepicker for Vue 3",
     "author": "Benedikt Schatz",
     "repository": "https://github.com/Schlechtwetterfront/vue-datepicker.git",
@@ -25,6 +25,7 @@
         "build": "rollup -c rollup.config.js",
         "build:dts": "api-extractor run --local --verbose",
         "build:samples": "webpack --env.NODE_ENV=prod --env.prod --env.production",
+        "release": "yarn build && yarn publish --acccess public",
         "test": "jest",
         "serve": "webpack-dev-server"
     },
