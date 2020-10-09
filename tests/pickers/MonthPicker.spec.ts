@@ -175,12 +175,6 @@ describe('MonthPicker', () => {
         expect(disabledEls).toHaveLength(12);
     });
 
-    it('should use transitions by default', () => {
-        const transition = wrapper.findComponent(TransitionGroup);
-
-        expect(transition.exists()).toBe(true);
-    });
-
     it('should not use transitions if disabled', () => {
         wrapper = makeWrapper({ transitions: false });
 
